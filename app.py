@@ -31,9 +31,9 @@ with st.container():
     with col1:
         st.write("##")
         st.title("Tanay's Portfolio")
-        st.subheader("Hey guys! :sparkles:")
+        st.subheader("Hey guys!")
 
-        st.write("""Greetings, Earthlings! I'm Tanay, your friendly neighborhood data enthusiast, embarking on a journey through the realms of Data Science, Machine Learning, Natural Language Processing, Computer Vision, and Deep Learning.
+        st.write("""Greetings, Earthlings! I'm Tanay, your friendly neighborhood data scientist, embarking on a journey through the realms of Data Science, Machine Learning, Natural Language Processing, Computer Vision, and Deep Learning.
                  Seeking out challenges that are as thrilling as a roller coaster ride through a quantum wormhole, I'm here to contribute my skills to the ever-expanding universe of knowledge.""")
     
     with col2:
@@ -69,12 +69,20 @@ if selected == "About":
             with col1:
                 st.write("##")
                 st.subheader("You must be wondering, 'Who is this handsome man !?'")
-                st.title("I am an Undergrad at CHARUSAT")
+                st.title("I'm a Graduate Student at Stony Brook University")
                 text = '<span style="color: #663399; font-weight: bold;">But do not let the macho countenance distract you!<br>My brain\'s even more fascinating 😉</span>'
                 st.markdown(text, unsafe_allow_html=True)
                 st.subheader("Education")
                 st.write(
-                    ":school: Charotar University of Science and Technology\n"
+                    "\n:books: MS in Data Science\n"
+                    "\n:school: SUNY Stony Brook University\n"
+                    "\n:clock1: Expected May 2026\n"
+                )
+                # Add a line break using markdown
+                st.markdown("<br>", unsafe_allow_html=True)
+                st.write(
+                    "\n\n:books: B.Tech in Computer Science and Engineering\n"
+                    "\n:school: Charotar University of Science and Technology\n"
                     "\n:clock1: June 2020 - May 2024\n"
                     "\n:mortar_board: CGPA: 9.69/10"
                 )
@@ -122,23 +130,17 @@ if selected == "Projects":
     with st.container():
         col5, col6 = st.columns(2)
         with col5:
-            st.subheader("""Deep Learning Frameworks for Vulnerability Detection in Network Traffic""")
+            st.subheader("""Rectangular Transform Neural Network (RTNN)""")
             st.markdown("""
-Conducted cutting-edge research on network security with a focus on 
-vulnerability detection in network traffic. Performed an in-depth 
-survey of leading Deep Learning frameworks including:
-1. CNN
-2. LSTM
-3. GAN powered with XGBoost
-4. ResNet50
-5. InceptionV3
-<br>
-Leveraged advanced frameworks to develop robust
-models enhancing threat detection capabilities. Demonstrated a keen 
-understanding of neural network architectures and their applications 
-in cybersecurity. Results contributed to an innovative approach for 
-safeguarding networks against potential vulnerabilities.
-""", unsafe_allow_html=True)
+Conducted innovative research in the field of machine learning and deep learning, focusing on developing an optimized neural network architecture named Rectangular Transform Neural Network (RTNN). This project aimed to address inefficiencies in conventional convolutional neural networks (CNNs), particularly in high-dimensional data processing.<br>
+<br>Key contributions and outcomes include:<br>
+1.	Pioneering the RTNN Architecture:<br>
+-	Designed and implemented RTNN to significantly accelerate convolution operations while preserving the integrity of feature extraction.<br>
+-	Leveraged advanced mathematical concepts, including calculus and matrix transformations, to enhance the model’s efficiency and scalability.<br>
+2.	Groundbreaking Performance Improvements:<br>
+-	Achieved a remarkable 7x reduction in processing time for analyzing 87,000 ECG samples from the MIT-BiH dataset.<br>
+-	Optimized processing time from 37.7 seconds to just 5.6 seconds, demonstrating exceptional efficiency gains in computational performance.<br>
+""",unsafe_allow_html=True)
         with col6:
             # Check if lottie_coder_animation is not None before using it
                 if lottie_coder_animation is not None:
@@ -242,14 +244,18 @@ if selected == "Contact":
             background-color: #267bb6;
         }
     </style>
-    <form action="https://formsubmit.co/tanaydeo2403@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <label for="name">Your Name</label>
-    <input type="text" id="name" name="name" required>
+    <form action="https://formsubmit.co/tanaydeo2403@gmail.com" method="POST" style="background-color: #121212; color: #ffffff; padding: 20px; border-radius: 10px; font-family: Arial, sans-serif;">
+    <input type="hidden" name="_captcha" value="false">
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" required>
-        <textarea name="message" placeholder="Your message" required></textarea>
-        <button type="submit">Send</button>
+    <label for="name" style="display: block; margin-bottom: 5px;">Your Name</label>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 15px; background-color: #1e1e1e; color: #ffffff; border: 1px solid #333; border-radius: 5px;">
+
+    <label for="email" style="display: block; margin-bottom: 5px;">Your Email</label>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 15px; background-color: #1e1e1e; color: #ffffff; border: 1px solid #333; border-radius: 5px;">
+
+    <label for="message" style="display: block; margin-bottom: 5px;">Your Message</label>
+    <textarea id="message" name="message" placeholder="Your message" required style="width: 100%; padding: 10px; margin-bottom: 15px; background-color: #1e1e1e; color: #ffffff; border: 1px solid #333; border-radius: 5px;"></textarea>
+
+    <button type="submit" style="background-color: #333; color: #ffffff; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Send</button>
     </form>
 """, unsafe_allow_html=True)
